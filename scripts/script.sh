@@ -6,11 +6,11 @@ echo "Current Date and Time: $current_datetime"
 
 # 发送通知的 curl 请求
 curl --request POST \
-  --url "$ONESIGNAL_URL" \
-  --header "Authorization: Basic $ONESIGNAL_API_KEY" \
+  --url "$ONE_URL" \
+  --header "Authorization: Basic $API_KEY" \
   --header 'Content-Type: application/json' \
   --data "{
-    \"app_id\": \"$ONESIGNAL_APP_ID\",
+    \"app_id\": \"$APP_ID\",
     \"included_segments\": [\"All\"],
     \"content_available\": true,
     \"data\": {
