@@ -18,7 +18,7 @@ jobs:
 
       - name: Run script with OneSignal secrets
         env:
-          ONESIGNAL_API_KEY: ${{ secrets.ONESIGNAL_API_KEY }}
-          ONESIGNAL_APP_ID: ${{ secrets.ONESIGNAL_APP_ID }}
-          ONESIGNAL_URL: ${{ secrets.ONESIGNAL_URL }}
+          API_KEY: ${{ secrets.API_KEY }}
+          APP_ID: ${{ secrets.APP_ID }}
+          ONE_URL: ${{ secrets.ONE_URL }}
         run: ./scripts/script.sh
