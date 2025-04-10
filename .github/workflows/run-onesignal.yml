@@ -1,24 +1,24 @@
-name: Send OneSignal Notification
+# name: Send OneSignal Notification
 
-on:
-  schedule:
-    - cron: '*/20 * * * *'  # 每 20 分钟运行一次
-  workflow_dispatch:         # 允许你手动运行
+# on:
+#   schedule:
+#     - cron: '*/20 * * * *'  # 每 20 分钟运行一次
+#   workflow_dispatch:         # 允许你手动运行
 
-jobs:
-  notify:
-    runs-on: ubuntu-latest
+# jobs:
+#   notify:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v3
 
-      - name: Make script executable
-        run: chmod +x ./scripts/script.sh
+#       - name: Make script executable
+#         run: chmod +x ./scripts/script.sh
 
-      - name: Run script with OneSignal secrets
-        env:
-          API_KEY: ${{ secrets.API_KEY }}
-          APP_ID: ${{ secrets.APP_ID }}
-          ONE_URL: ${{ secrets.ONE_URL }}
-        run: ./scripts/script.sh
+#       - name: Run script with OneSignal secrets
+#         env:
+#           API_KEY: ${{ secrets.API_KEY }}
+#           APP_ID: ${{ secrets.APP_ID }}
+#           ONE_URL: ${{ secrets.ONE_URL }}
+#         run: ./scripts/script.sh
